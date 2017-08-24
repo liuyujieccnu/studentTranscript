@@ -6,26 +6,26 @@ var sinonChai = require("sinon-chai");
 var expect = chai.expect;
 chai.use(sinonChai);
 
-var main = require("../lib/main.js");
+const main = require("../lib/main.js");
 
 
-describe("测试描述", function(){
+describe("学生成绩单命令行版", function(){
     sinon.spy(console, 'log');
 
-    it("测试用例1", function(){
+    it("学生添加正确", function(){
 
-        var result = main();
-        var expect_string = '';
+        let result = main();
+        let expect_string = '';
         
         expect(expect_string).to.equal(result);
     });
 
-    it("测试用例2", function(){
-
-        main();
-        var result = _.flatten(console.log.args).join("\n");
-        var expect_string = '';
-
-        expect(expect_string).to.equal(result);
-    });
+    // it("测试用例2", function(){
+    //
+    //     main();
+    //     var result = _.flatten(console.log.args).join("\n");
+    //     var expect_string = '';
+    //
+    //     expect(expect_string).to.equal(result);
+    // });
 });
